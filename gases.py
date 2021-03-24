@@ -24,3 +24,17 @@ def datos():
   else:
     temperatura = 0
   return opcion, presion, volumen, moles, temperatura
+
+def calcular(opc, P, V, n, T):
+  R = 0.0821
+  if opc == 1:
+     return "La presion es: " + str(n * R * T / V)
+  elif opc == 2:
+     return "El volumen es: " + str(n * R * T / P)
+  elif opc == 3:
+     return "Los moles son: " + str(P * V / (R * T))
+  elif opc == 4:
+     return "La temperatura es: " + str(P * V / (R * n))
+  else:
+     return "Opcion mal ingresada."
+
